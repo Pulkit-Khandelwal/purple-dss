@@ -1,0 +1,23 @@
+{
+  "name": "PurpleExVivoSegmentation",
+  "version": "0.1.0",
+  "keywords": [
+    "purple",
+    "postmortem",
+    "exvivo",
+    "nnUNet",
+    "segmentation"
+  ],
+  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Net",
+  "longdesc": "Runs the purple-mri nnU-Net segmentation workflow on a tagged MRI image and returns a segmentation layer to ITK-SNAP.",
+  "url": "https://purple-mri.readthedocs.io/en/latest/",
+  "author": "Pulkit Khandelwal",
+  "tags": [
+    {
+      "name": "InputMRI",
+      "type": "MainImage",
+      "hint": "Main postmortem MRI image to segment.",
+      "required": true
+    }
+  ]
+}
