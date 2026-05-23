@@ -1,14 +1,14 @@
 {
-  "name": "PurpleExVivoSegmentation",
+  "name": "purple",
   "version": "0.1.0",
   "keywords": [
-    "purple",
+    "purple-mri",
     "postmortem",
     "exvivo",
     "nnUNet",
     "segmentation"
   ],
-  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Net",
+  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Ne and FreeSurfer",
   "longdesc": "Runs the purple-mri nnU-Net segmentation workflow on a tagged MRI image and returns a segmentation layer to ITK-SNAP.",
   "url": "https://purple-mri.readthedocs.io/en/latest/",
   "author": "Pulkit Khandelwal",
