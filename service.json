@@ -8,8 +8,8 @@
     "nnUNet",
     "segmentation"
   ],
-  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Ne and FreeSurfer",
-  "longdesc": "Runs the purple-mri nnU-Net segmentation workflow on a tagged MRI image and returns a segmentation layer to ITK-SNAP.",
+  "shortdesc": "purple-mri (Penn Utilities for Registration and Parcellation of Ex Vivo MRI)",
+  "longdesc": "purple-mri is a computational framework for segmentation, registration, surface reconstruction, and atlas-based parcellation of ultra–high-resolution postmortem human brain MRI.",
   "url": "https://purple-mri.readthedocs.io/en/latest/",
   "author": "Pulkit Khandelwal",
   "tags": [
