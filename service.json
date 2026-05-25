@@ -6,18 +6,27 @@
     "postmortem",
     "exvivo",
     "nnUNet",
-    "segmentation"
+    "segmentation",
+    "surface reconstruction",
+    "FreeSurfer",
+    "parcellation"
   ],
-  "shortdesc": "purple-mri (Penn Utilities for Registration and Parcellation of Ex Vivo MRI)",
-  "longdesc": "purple-mri is a computational framework for segmentation, registration, surface reconstruction, and atlas-based parcellation of ultra–high-resolution postmortem human brain MRI.",
+  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Net and FreeSurfer",
+  "longdesc": "Runs purple-mri nnU-Net tissue segmentation followed by surface reconstruction and atlas-based parcellation for ultra-high-resolution postmortem human brain MRI. Assign the input MRI to either InputMRI_RH or InputMRI_LH depending on hemisphere.",
   "url": "https://purple-mri.readthedocs.io/en/latest/",
   "author": "Pulkit Khandelwal",
   "tags": [
     {
-      "name": "InputMRI",
+      "name": "InputMRI_RH",
       "type": "MainImage",
-      "hint": "Main postmortem MRI image to segment.",
-      "required": true
+      "hint": "Right hemisphere postmortem MRI image.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_LH",
+      "type": "MainImage",
+      "hint": "Left hemisphere postmortem MRI image.",
+      "required": false
     }
   ]
 }
