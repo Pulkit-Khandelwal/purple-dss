@@ -1,0 +1,32 @@
+{
+  "name": "purple",
+  "version": "0.1.0",
+  "keywords": [
+    "purple-mri",
+    "postmortem",
+    "exvivo",
+    "nnUNet",
+    "segmentation",
+    "surface reconstruction",
+    "FreeSurfer",
+    "parcellation"
+  ],
+  "shortdesc": "purple-mri ex vivo MRI segmentation using nnU-Net and FreeSurfer",
+  "longdesc": "Runs purple-mri nnU-Net tissue segmentation followed by surface reconstruction and atlas-based parcellation for ultra-high-resolution postmortem human brain MRI. Assign the input MRI to either InputMRI_RH or InputMRI_LH depending on hemisphere.",
+  "url": "https://purple-mri.readthedocs.io/en/latest/",
+  "author": "Pulkit Khandelwal",
+  "tags": [
+    {
+      "name": "InputMRI_RH",
+      "type": "MainImage",
+      "hint": "Right hemisphere postmortem MRI image.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_LH",
+      "type": "MainImage",
+      "hint": "Left hemisphere postmortem MRI image.",
+      "required": false
+    }
+  ]
+}
