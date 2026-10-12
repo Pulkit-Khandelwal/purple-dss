@@ -1,23 +1,31 @@
 {
   "name": "purple",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": [
     "purple-mri",
     "postmortem",
     "exvivo",
     "nnUNet",
-    "segmentation"
+    "segmentation",
+    "surface reconstruction",
+    "parcellation"
   ],
-  "shortdesc": "purple-mri (Penn Utilities for Registration and Parcellation of Ex Vivo MRI)",
-  "longdesc": "purple-mri is a computational framework for segmentation, registration, surface reconstruction, and atlas-based parcellation of ultra-high-resolution postmortem human brain MRI.",
+  "shortdesc": "purple-mri: ex vivo MRI DL segmentation, surfaces and parcellation",
+  "longdesc": "Run the combined purple-mri adult ex vivo DL and surface workflow. Assign the main MRI to exactly one hemisphere tag: InputMRI_LH for left or InputMRI_RH for right. Outputs include segmentation layers and optional FreeSurfer attachments.",
   "url": "https://purple-mri.readthedocs.io/en/latest/",
   "author": "Pulkit Khandelwal",
   "tags": [
     {
-      "name": "InputMRI",
+      "name": "InputMRI_LH",
       "type": "MainImage",
-      "hint": "Main postmortem MRI image to segment.",
-      "required": true
+      "hint": "LEFT hemisphere MRI. Assign exactly one of InputMRI_LH or InputMRI_RH.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_RH",
+      "type": "MainImage",
+      "hint": "RIGHT hemisphere MRI. Assign exactly one of InputMRI_LH or InputMRI_RH.",
+      "required": false
     }
   ]
 }
