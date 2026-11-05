@@ -1,30 +1,64 @@
 {
   "name": "purple",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "shortdesc": "purple-mri: adult ex vivo segmentation, surfaces and parcellation",
+  "longdesc": "Process one adult ex vivo hemisphere with purple-mri Docker 1.2.0. Assign the main MRI to exactly ONE tag matching its contrast (T2w, CISS, FLASH or T2star) and hemisphere (LH or RH). Download six attachments containing segmentations, seven final atlas merges, surface parcellations, surfaces, statistics and reports. Extract them together and overlay the segmentations on your original MRI.",
+  "url": "https://purple-mri.readthedocs.io/en/latest/",
+  "author": "Pulkit Khandelwal",
   "keywords": [
     "purple-mri",
-    "postmortem",
     "exvivo",
-    "nnUNet",
     "segmentation",
     "surface reconstruction",
     "parcellation"
   ],
-  "shortdesc": "purple-mri: ex vivo MRI DL segmentation, surfaces and parcellation",
-  "longdesc": "Run the combined purple-mri adult ex vivo DL and surface workflow. Assign the main MRI to exactly one hemisphere tag: InputMRI_LH for left or InputMRI_RH for right. Outputs include segmentation layers and optional FreeSurfer attachments.",
-  "url": "https://purple-mri.readthedocs.io/en/latest/",
-  "author": "Pulkit Khandelwal",
   "tags": [
     {
-      "name": "InputMRI_LH",
+      "name": "InputMRI_T2W_LH",
       "type": "MainImage",
-      "hint": "LEFT hemisphere MRI. Assign exactly one of InputMRI_LH or InputMRI_RH.",
+      "hint": "T2W LH hemisphere MRI. Assign exactly one of these eight tags.",
       "required": false
     },
     {
-      "name": "InputMRI_RH",
+      "name": "InputMRI_T2W_RH",
       "type": "MainImage",
-      "hint": "RIGHT hemisphere MRI. Assign exactly one of InputMRI_LH or InputMRI_RH.",
+      "hint": "T2W RH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_CISS_LH",
+      "type": "MainImage",
+      "hint": "CISS LH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_CISS_RH",
+      "type": "MainImage",
+      "hint": "CISS RH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_FLASH_LH",
+      "type": "MainImage",
+      "hint": "FLASH LH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_FLASH_RH",
+      "type": "MainImage",
+      "hint": "FLASH RH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_T2STAR_LH",
+      "type": "MainImage",
+      "hint": "T2STAR LH hemisphere MRI. Assign exactly one of these eight tags.",
+      "required": false
+    },
+    {
+      "name": "InputMRI_T2STAR_RH",
+      "type": "MainImage",
+      "hint": "T2STAR RH hemisphere MRI. Assign exactly one of these eight tags.",
       "required": false
     }
   ]
