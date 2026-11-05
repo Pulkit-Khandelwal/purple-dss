@@ -72,7 +72,7 @@ the existing provider/descriptor hashes against the CLAM inventory before writin
 The packaging test validates existing outputs, converts the nine existing MGZ
 parcellations to NIfTI, and creates six verified archives in a fresh directory.
 
-Publish the four release files and register the exact Git commit with DSS:
+Publish the release files and register the exact Git commit with DSS:
 
 ```bash
 bash publish_on_clam.sh
