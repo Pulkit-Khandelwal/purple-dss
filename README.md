@@ -1,5 +1,49 @@
 # purple-dss
 
+<!-- purple-dss-current:start -->
+## Current service: purple 0.3.0
+
+The service uses **Purple MRI Docker 1.2.0** to process one adult ex vivo
+hemisphere per submission: tissue segmentation, cortical reconstruction and
+seven atlas merges with detailed MTL and subcortical structures.
+
+### Submit an MRI
+
+1. Open the hemisphere MRI as the main image in ITK-SNAP.
+2. Open Distributed Segmentation Service and connect to `https://dss.itksnap.org`.
+3. Select **purple 0.3.0** and assign the main image to **exactly one** tag below.
+4. Submit, then download the six result attachments from the progress messages.
+
+| Contrast | Left hemisphere | Right hemisphere |
+|---|---|---|
+| T2w | `InputMRI_T2W_LH` | `InputMRI_T2W_RH` |
+| CISS | `InputMRI_CISS_LH` | `InputMRI_CISS_RH` |
+| FLASH | `InputMRI_FLASH_LH` | `InputMRI_FLASH_RH` |
+| T2* | `InputMRI_T2STAR_LH` | `InputMRI_T2STAR_RH` |
+
+### Downloads
+
+| Archive | Contents |
+|---|---|
+| `purple_segmentations.tar.gz` | Baseline, MTL, subcortical, detailed merged and surface-input labels; Task278 outputs for FLASH/T2* |
+| `purple_parcellations_01_classic.zip` | Final DKT and Destrieux merges and LUTs; three existing surface parcellations |
+| `purple_parcellations_02_modern.zip` | Final Glasser, Schaefer400 and Brainnetome merges, LUTs and their surface parcellations |
+| `purple_parcellations_03_additional.zip` | Final Economo and Julich merges and LUTs; Economo, Julich and white-matter surface parcellations |
+| `purple_surfaces.tar.gz` | Selected-hemisphere surfaces, vertex metrics, annotations and statistics |
+| `purple_reports.tar.gz` | Validation reports, processing logs, timings and file manifest |
+
+Extract the six archives together and overlay the NIfTI segmentations on the
+original MRI. In the parcellation archives, `final_merged/` contains the seven
+atlas-plus-DL maps, and `surface_projection/` contains the nine surface-derived
+parcellation volumes. The detailed tissue map is `dl/11_final_merged`; cortical
+reconstruction uses `dl/12_surface_labels`.
+
+**[Full submission and provider instructions](docs/dss_v120.md)**
+
+Use this section and the linked guide for service 0.3.0.
+<!-- purple-dss-current:end -->
+
+
 **ITK-SNAP Distributed Segmentation Service (DSS) interface for [purple-mri](https://github.com/Pulkit-Khandelwal/purple-mri)**
 
 `purple-dss` connects the [purple-mri](https://purple-mri.readthedocs.io/en/latest/) postmortem brain MRI processing framework to [ITK-SNAP's Distributed Segmentation Service](https://dss.itksnap.org/). It is designed to let researchers submit an ex vivo brain MRI from ITK-SNAP, process it on a remote GPU-enabled provider, and retrieve the resulting segmentations and associated surface outputs.
